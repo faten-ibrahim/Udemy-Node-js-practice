@@ -92,3 +92,31 @@ class Car {
 
 var myCar=new Car("Ferarri",'12233');
 myCar.showDetails();
+
+
+
+// callback functions
+
+function test(callbackFunName) {
+    console.log("Hello From Test function");
+    var data={
+        name:"faten elssayad"
+    }
+    callbackFunName(data);
+   
+}
+
+test(function(data) {
+    console.log(`callback invoked : ${data.name}`);
+});
+
+test(function(data){
+    console.log("A different callback function invoked");
+});
+
+function callbackFun(data){
+    console.log(`third callback fun invoked : ${data}`);
+    console.log("data :",data);
+}
+
+test(callbackFun);
